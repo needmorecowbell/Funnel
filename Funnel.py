@@ -1,6 +1,8 @@
 import os
+import json
 import requests
 import argparse
+from pprint import pprint
 import feedparser
 import yara
 
@@ -18,8 +20,9 @@ def isMatch(rule, target_path):
 def compileRules(rule_path):
     ruleSet=[]
     for root, sub, files in os.walk(rule_path):
+        #print("Compiling Rules")
         for file in files:
-            print("\t"+os.path.join(root,file))
+            #print("\t"+os.path.join(root,file))
             rule = yara.compile(os.path.join(root,file))
             ruleSet.append(rule)
     return ruleSet
@@ -52,7 +55,7 @@ def scanTargetLink(target_path, ruleSet ):
     os.remove("tmp")
 
 def main():
-    message= '''
+    art= '''
       \:.     .:/
        \:::::::/ 
         \:::::/ 
@@ -61,20 +64,40 @@ def main():
            .  
           .:.   
     '''
-    print(message+"Welcome to Funnel")
-    print() 
-    compiled_rules = []
-    url = "http://feeds.feedburner.com/PaloAltoNetworks"
+    print(art+"Welcome to Funnel\n")
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-v", "--verbose", help="increase output verbosity", action="store_true")
+    parser.add_argument("-u", "--url", help="scan one url instead of using sources list", action="store_true")
+    parser.add_argument("rule_path", help="path to directory of rules used on list of feeds")
+    parser.add_argument("target_path", help="path to sources list or url")
+    args = parser.parse_args()
+
+
+    #url = "http://feeds.feedburner.com/PaloAltoNetworks"
     url = "https://cooking.nytimes.com/recipes/2868-jordan-marshs-blueberry-muffins"
-    url = "https://adammusciano.com/2018/11/13/coding-livestream-3-let-s-learn-about-yara/"
-    rule_path = 'rules/'
+    #url = "https://adammusciano.com/2018/11/13/coding-livestream-3-let-s-learn-about-yara/"
+
+    
 
 
-    print("Loading rules")
-    ruleset = compileRules(rule_path)
+    if(args.verbose): print("Loading rules")
+    ruleset = compileRules(args.rule_path)
 
-    print("Scanning Directory ...")
-    scanTargetLink(url,ruleset)
+    if(args.url):
+        if(args.verbose): print("Scanning URL...")
+        scanTargetLink(args.target_path,ruleset)
+    else:
+        if(args.verbose): print("Reading from Sources list...")
+        with open(args.target_path, "r") as f:
+            sources = json.load(f)
+            for source in sources["sources-rss"]:
+                #print("Feed: "+source["title"])
+                #print("\turl: "+source["url"])
+                feed = feedparser.parse(source["url"])
+
+                for post in feed.entries:
+                    print(post.link)
 
 if __name__ == "__main__":
     main()
