@@ -5,7 +5,7 @@ Funnel is a lightweight yara-based feed scraper. Give a list of inputs and it wi
 Inspired by ThreatIngestor from InQuest
 
 **Usage:**
-
+```bash
 Funnel.py [-h] [-v] [-u] rule_path target_path
 
 positional arguments:
@@ -16,4 +16,4 @@ optional arguments:
   -h, --help     show this help message and exit
   -v, --verbose  increase output verbosity
   -u, --url      scan one url instead of using sources list
-
+```
