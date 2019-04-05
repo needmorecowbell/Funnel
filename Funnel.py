@@ -44,14 +44,29 @@ def scanTargetLink(target_path, ruleSet ):
 
     for rule in ruleSet:
         matches = rule.match("tmp")
-        print(matches)
+        if(matches):
+            for match in matches:
+                print("Match: "+ str(match))
+
+    # remove tmp file
+    os.remove("tmp")
 
 def main():
-    print("Welcome to Funnel")
- 
+    message= '''
+      \:.     .:/
+       \:::::::/ 
+        \:::::/ 
+         \:::/   
+          \:/    
+           .  
+          .:.   
+    '''
+    print(message+"Welcome to Funnel")
+    print() 
     compiled_rules = []
     url = "http://feeds.feedburner.com/PaloAltoNetworks"
     url = "https://cooking.nytimes.com/recipes/2868-jordan-marshs-blueberry-muffins"
+    url = "https://adammusciano.com/2018/11/13/coding-livestream-3-let-s-learn-about-yara/"
     rule_path = 'rules/'
 
 
