@@ -32,7 +32,7 @@ optional arguments:
 **Example:** `python3 Funnel.py rules sources/sources-large.json
 `
 
-## Sources
+### Sources
 
 The sources should be in a json file, with a url and a title for each source in the list. Here is a barebones example:
 
@@ -54,11 +54,11 @@ The sources should be in a json file, with a url and a title for each source in 
 
 ```
 
-## Rules
+### Rules
 
 Some sample rules have been provided in the rules folder. Any standard yara rule will work, it is always being compared on text content at this point, no file analysis yet. You can pass in either a directory of rules, a nested directory of rules, or just one rule.
 
-## Database
+### Database
 
 The database is in sqlite, and works with two tables. The first, is a table of links of matched articles, which have a unique id. The second table is a table of the matched rules with the matched article's id together. This keeps duplicates out of the links table, and makes for easy reference.
 
