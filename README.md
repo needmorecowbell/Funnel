@@ -24,6 +24,11 @@ optional arguments:
   -u, --url      scan one url instead of using sources list
 ```
 
+**Example:** `python3 Funnel.py rules sources/sources-large.json
+`
+## Database:
+
+The database is in sqlite, and works with two tables. The first, is a table of links of matched articles, which have a unique id. The second table is a table of the matched rules with the matched article's id together. This keeps duplicates out of the links table, and makes for easy reference.
 
 ## Contribute
 
@@ -31,4 +36,5 @@ Feel free to add your suggestions for what to add to this project, even better i
 
 
 Inspired by ThreatIngestor from InQuest
+
 
