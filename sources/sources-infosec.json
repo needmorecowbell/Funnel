@@ -1,0 +1,25 @@
+{
+    "sources-rss":[
+        {
+		"url": "https://www.reddit.com/r/netsec/.rss",
+		"title": "netsec subreddit"
+	},
+        {
+		"url": "https://www.reddit.com/r/hacking/.rss",
+		"title": "hacking subreddit"
+	},
+	{
+		"url": "https://www.reddit.com/r/malware/.rss",
+		"title": "subreddit"
+	},
+        {
+		"url": "https://www.reddit.com/r/blackhat/.rss",
+		"title": "subreddit"
+	},
+	{
+		"url": "https://www.reddit.com/r/networking/.rss",
+		"title": "subreddit"
+	}
+    ]
+
+}

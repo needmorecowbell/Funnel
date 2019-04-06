@@ -1,5 +1,7 @@
 # Funnel
 
+**THIS REPO IS IN DEVELOPMENT**
+
 Funnel is a lightweight yara-based feed scraper. Give a list of inputs and it will check them periodically -- if the request gets matched to the yara rule, it will be put into the database. All matched results get put into an sqlite database, with the rule it flagged. 
 
 Inspired by ThreatIngestor from InQuest
@@ -16,4 +18,5 @@ optional arguments:
   -h, --help     show this help message and exit
   -v, --verbose  increase output verbosity
   -u, --url      scan one url instead of using sources list
+
 
