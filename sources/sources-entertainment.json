@@ -1,0 +1,25 @@
+{
+    "sources-rss":[
+        {
+		"url": "http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml",
+		"title": "E! News"
+	},
+        {
+		"url": "http://feeds.reuters.com/reuters/entertainment",
+		"title": "Reuters Entertainment"
+	},
+	{
+		"url": "http://www.instyle.com/feeds/all/ins.rss",
+		"title": "InStyle"
+	},
+        {
+		"url": "http://feeds.accesshollywood.com/AccessHollywood/LatestNews",
+		"title": "Access"
+	},
+	{
+		"url": "https://www.npr.org/rss/rss.php?id=1008",
+		"title": "NPR Art & Entertainment"
+	}
+    ]
+
+}

@@ -1,0 +1,29 @@
+{
+    "sources-rss":[
+        {
+		"url": "http://rssfeeds.usatoday.com/usatoday-newstopstories&x=1",
+		"title": "USA Today US News"
+	},
+        {
+		"url": "https://www.yahoo.com/news/rss/",
+		"title": "yahoo news"
+	},
+	{
+		"url": "http://feeds.reuters.com/Reuters/domesticNews",
+		"title": "Reuters domestic news"
+	},
+        {
+		"url": "http://feeds.skynews.com/feeds/rss/us.xml",
+		"title": "skynews us news"
+	},
+	{
+		"url": "http://rss.cnn.com/rss/edition_us.rss",
+		"title": "CNN US news"
+	},
+        {
+		"url": "http://feeds.foxnews.com/foxnews/national",
+		"title": "Fox US news"
+	}
+    ]
+
+}

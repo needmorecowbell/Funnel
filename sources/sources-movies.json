@@ -1,0 +1,25 @@
+{
+    "sources-rss":[
+        {
+		"url": "https://www.npr.org/rss/rss.php?id=1045",
+		"title": "NPR Movies"
+	},
+        {
+		"url": "https://www.fandango.com/rss/newmovies.rss",
+		"title": "Fandango New Movies"
+	},
+	{
+		"url": "http://www.metacritic.com/rss/movies",
+		"title": "Metacritic movies"
+	},
+        {
+		"url": "https://www.rogerebert.com/feed",
+		"title": "roger ebert"
+	},
+	{
+		"url": "http://www.movies.com/rss-feeds/movie-news-rss",
+		"title": "movies.com"
+	}
+    ]
+
+}

@@ -1,0 +1,25 @@
+{
+    "sources-rss":[
+        {
+		"url": "http://www.si.com/rss/si_topstories.rss",
+		"title": "Sports Illustrated"
+	},
+        {
+		"url": "http://feeds1.nytimes.com/nyt/rss/Sports",
+		"title": "NY Times Sports"
+	},
+	{
+		"url": "https://talksport.com/rss/sports-news/all/feed",
+		"title": "TalkSport"
+	},
+        {
+		"url": "http://feeds.sport24.co.za/articles/Sport/Featured/TopStories/rss",
+		"title": "Sport24 Top Stories"
+	},
+	{
+		"url": "http://rss.cnn.com/rss/edition_sport.rss",
+		"title": "CNN Sports"
+	}
+    ]
+
+}

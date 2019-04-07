@@ -1,0 +1,29 @@
+{
+    "sources-rss":[
+        {
+		"url": "https://techcrunch.com/pages/rssfeeds/",
+		"title": "Techcrunch"
+	},
+        {
+		"url": "http://rss.slashdot.org/Slashdot/slashdot",
+		"title": "Slashdot"
+	},
+	{
+		"url": "https://spectrum.ieee.org/rss/blog/tech-talk/fulltext",
+		"title": "IEEE Spectrum"
+	},
+        {
+		"url": "https://www.techworld.com/news/rss",
+		"title": "techworld"
+	},
+	{
+		"url": "https://www.wired.com/feed",
+		"title": "Wired"
+	},
+	{
+		"url": "http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+		"title": "NY Times Tech"
+	}
+    ]
+
+}
