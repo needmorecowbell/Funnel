@@ -53,6 +53,8 @@ The sources should be in a json file, with a url and a title for each source in 
 }
 
 ```
+**Tip:** Extract sources from feedly by using the opml_to_json.py file in the util folder to turn your exported feedly opml file into a valid sources file
+
 
 ### Rules
 
