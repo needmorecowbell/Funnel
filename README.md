@@ -6,7 +6,7 @@
 </p>
 
 
-Funnel is a lightweight yara-based feed scraper. Give a list of inputs and it will check them periodically. If the article gets matched to the yara rule, it will be put into the database. All matched results get put into an sqlite database, with the rule it flagged.
+Funnel is a lightweight yara-based feed scraper. Give a list of inputs and it will check them. Put it in a crontab and it will regularly update the database. If the article gets matched to the yara rule, it will be put into the database. All matched results get put into an sqlite database, with the rule it flagged.
 
 ## Installation
 
