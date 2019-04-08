@@ -29,8 +29,20 @@ optional arguments:
   -u, --url      scan one url instead of using sources list
 ```
 
-**Example:** `python3 Funnel.py rules sources/sources-large.json
+**Example:** 
+
+You want to get every new post on the internet that has your name or personal info in it. You would use as many sources as possible,and fill out the personal_info.yar rule. 
+
+Schedule this command to run regularly using crontab:
+
+`python3 Funnel.py rules/personal/ sources/sources-large.json
 `
+
+Want to scan just one url to see if it matches against any of your rule set? 
+
+`python3 Funnel.py -u rules/ https://www.bbc.com/news/world-asia-47844000`
+
+A bar that wants all the newest margharita recipes? You could do that. Every single post about a politician, for a data visualization project on how much each person is talked about? Works too! Just add rules and sources.
 
 ### Sources
 
